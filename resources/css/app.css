@@ -1,0 +1,498 @@
+/* =========================================
+   BODY
+========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: min(92%, 1500px);
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.search-form {
+    width: 100%;
+}
+
+/* =========================================
+   CABECERA DE LA PÁGINA
+========================================= */
+
+.page-header {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 30px 0 22px;
+}
+
+.page-header h2 {
+    margin: 0 0 6px;
+
+    color: #003b7a;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.page-header p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FILTROS
+========================================= */
+
+.filters {
+    width: 100%;
+    max-width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e4e8;
+    border-radius: 6px;
+
+    padding: 16px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: flex-end;
+
+    gap: 12px;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CADA FILTRO
+========================================= */
+
+.filter-group {
+    /*
+     * El filtro puede crecer,
+     * pero nunca obliga al contenedor
+     * a hacerse más grande.
+     */
+    flex: 1 1 130px;
+
+    min-width: 110px;
+    max-width: 190px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.filter-group label {
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #555555;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   INPUTS Y SELECTS
+========================================= */
+
+.filter-group input,
+.filter-group select {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    height: 36px;
+
+    padding: 0 8px;
+
+    border: 1px solid #ccd2d8;
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+.filter-group input:focus,
+.filter-group select:focus {
+    border-color: #003b7a;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 59, 122, 0.1);
+}
+
+
+/* =========================================
+   FECHAS
+========================================= */
+
+.filter-date {
+    flex-basis: 150px;
+    max-width: 180px;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.filter-actions {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.filter-actions .btn {
+    height: 36px;
+
+    padding: 0 18px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLA - CONTENEDOR
+========================================= */
+
+.table-container {
+    width: 100%;
+    max-width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e4e8;
+    border-radius: 6px;
+
+    /*
+     * EL SCROLL PERTENECE A LA TABLA,
+     * NO A TODA LA PÁGINA.
+     */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   TABLA
+========================================= */
+
+.data-table {
+    width: 100%;
+
+    /*
+     * Permite que la tabla sea más grande
+     * que el contenedor cuando sea necesario.
+     */
+    min-width: 1200px;
+
+    border-collapse: collapse;
+
+    table-layout: auto;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CABECERA
+========================================= */
+
+.data-table thead {
+    background: #003b7a;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   COLUMNAS
+========================================= */
+
+.data-table th {
+    min-width: 130px;
+
+    padding: 10px;
+
+    text-align: left;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    vertical-align: top;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   BOTÓN ORDENACIÓN
+========================================= */
+
+.sort-button {
+    width: 100%;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+.sort-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   FILTROS DE COLUMNAS
+========================================= */
+
+.column-filter {
+    display: block;
+
+    width: 100%;
+    min-width: 90px;
+
+    height: 28px;
+
+    margin-top: 8px;
+
+    padding: 0 7px;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+.column-filter::placeholder {
+    color: #777777;
+}
+
+.column-filter:focus {
+    border-color: #ffffff;
+
+    box-shadow:
+        0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================================
+   CELDAS
+========================================= */
+
+.data-table td {
+    padding: 12px 10px;
+
+    border-bottom: 1px solid #e8ebee;
+
+    white-space: nowrap;
+}
+
+.data-table tbody tr {
+    transition: background 0.15s;
+}
+
+.data-table tbody tr:hover {
+    background: #f5f8fb;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   SIN RESULTADOS
+========================================= */
+
+.empty-results {
+    text-align: center;
+
+    padding: 30px !important;
+
+    color: #777777;
+}
+
+
+/* =========================================
+   SCROLL DE LA TABLA
+========================================= */
+
+.table-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #999999;
+
+    border-radius: 5px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #777777;
+}
+
+
+/* =========================================
+   PAGINACIÓN
+========================================= */
+
+.pagination {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    padding: 20px 0 40px;
+}
+
+.pagination-button {
+    padding: 8px 14px;
+
+    border: 1px solid #ccd2d8;
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    color: #003b7a;
+
+    cursor: pointer;
+}
+
+.pagination-button:hover {
+    background: #f0f3f6;
+}
+
+.pagination-current {
+    font-size: 13px;
+
+    color: #666666;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .filter-group {
+        flex: 1 1 140px;
+        max-width: none;
+    }
+
+    .filter-date {
+        flex: 1 1 160px;
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .filters {
+        padding: 12px;
+
+        gap: 10px;
+    }
+
+    .filter-group,
+    .filter-date {
+        flex: 1 1 100%;
+
+        max-width: none;
+    }
+
+    .filter-actions {
+        width: 100%;
+    }
+
+    .filter-actions .btn {
+        width: 100%;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+
+}
